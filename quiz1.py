@@ -1,16 +1,4 @@
-
 # 문제 1
-
-'''
-
-- 주석달기
-- 풀이 
- - 표 PDF
-- 다양한 테스트케이스
- - 백준
-
-'''
-
 
 import sys
 
@@ -23,10 +11,10 @@ def get_number_of_cases():
 def run_functions():
     number_of_cases = get_number_of_cases()
     if number_of_cases == 1:
-        calculate_minimum_time()  # -------->>>
+        calculate_minimum_time()
         return
     for n in range(0, number_of_cases):
-        print('\n---- {}번째 캐이스 ----\n'.format(n+1))
+        # print('\n---- {}번째 캐이스 ----\n'.format(n+1))
         calculate_minimum_time()
 
 
@@ -47,17 +35,6 @@ def calculate_minimum_time():
 
         # 각 놀이기구의 탑승시간 (배열)
         rides_list = [int(element) for element in line3]
-
-        # 입력값 조건 확인
-        # if ppl_total < num_of_rides:
-        #     print('\n잘못된 입력 : 아이들의 수는 놀이기구의 수보다 같거나 많아야 합니다.\n')
-        #     calculate_minimum_time()
-
-        # print()
-        # print('총 인원수 :', ppl_total)
-        # print('놀이기구 수 :', num_of_rides)
-        # print('각 놀이기구의 탑승시간', rides_list)
-
         
         for time_count in range(1, 10**10):
             ppl_finished = 0
@@ -67,8 +44,8 @@ def calculate_minimum_time():
                 time_total = time_count
                 break
 
-        print()
-        print('최소 소요시간 :', time_total)
+        # print('최소 소요시간 :')
+        print(time_total)
 
     except Exception as e:
         print(e)
@@ -79,5 +56,4 @@ def calculate_minimum_time():
 
 
 run_functions()
-# get num of case 로 시작?
 print('\n---- 모든 케이스가 종료되었습니다. ----')

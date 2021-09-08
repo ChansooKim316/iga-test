@@ -1,3 +1,5 @@
+# 문제 2
+
 from queue import Queue
 
 
